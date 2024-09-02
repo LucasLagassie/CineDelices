@@ -47,7 +47,7 @@ VALUES
 INSERT INTO "recipe"
     ("name", "description", "picture", "difficulty", "time", "instruction", "recipe_category_id", "movie_id", "user_id")
 VALUES
-    ('Soupe à l''Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l\'huile d\'olive dans une grande casserole...', 1, 1, NULL),
+    ('Soupe à l''Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l''huile d''olive dans une grande casserole...', 1, 1, NULL),
 
     ('Ratatouille', 'Un plat principal provençal avec des légumes frais.', NULL, 'Moyenne', '1:00:00', 'Préchauffez le four à 180°C. Coupez les légumes en tranches fines...', 1, 1, NULL),
 
@@ -55,13 +55,13 @@ VALUES
 
     ('Sablés de Tatooine', 'Des sablés évoquant les paysages désertiques de Tatooine.', NULL, 'Facile', '35:00', 'Préchauffez le four à 180°C. Mélangez la farine, le sucre et le sel...', 2, 2, NULL),
 
-    ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l\'huile d\'olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
+    ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l''huile d''olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
 
     ('Tarte aux Étoiles', 'Une tarte évoquant les étoiles et constellations.', NULL, 'Facile', '50:00', 'Préchauffez votre four à 180°C. Étalez la pâte sablée et foncez un moule...', 2, 2, NULL),
 
     ('Nachos au Fromage avec "Crystal Blue" Salsa', 'Des nachos avec une salsa inspirée des cristaux du laboratoire.', NULL, 'Facile', '20:00', 'Préchauffez le four à 180°C. Disposez les chips de tortilla sur une plaque...', 3, 3, NULL),
 
-    ('Chili "Heisenberg" à la Mexicaine', 'Un chili épicé inspiré par Breaking Bad.', NULL, 'Moyenne', '45:00', 'Faites chauffer l\'huile d\'olive dans une grande casserole. Ajoutez l''oignon...', 3, 3, NULL),
+    ('Chili "Heisenberg" à la Mexicaine', 'Un chili épicé inspiré par Breaking Bad.', NULL, 'Moyenne', '45:00', 'Faites chauffer l''huile d''olive dans une grande casserole. Ajoutez l''oignon...', 3, 3, NULL),
 
     ('Ribs au Barbecue', 'Des ribs tendres avec une sauce barbecue épicée.', NULL, 'Difficile', '2:30:00', 'Faites mariner les ribs dans une sauce barbecue pendant la nuit...', 3, 3, NULL),
 
@@ -106,7 +106,7 @@ VALUES ('Oignon'),
     ('Sucre glace'),
     ('Jaune d''œuf'),
     ('Extrait de vanille'),
-    ('Viande de bœuf'),
+    ('Viande de boeuf'),
     ('Carottes'),
     ('Pommes de terre'),
     ('Champignons'),
@@ -121,7 +121,7 @@ VALUES ('Oignon'),
 ;
 
 INSERT INTO 
-    "recipe_has_ingredient" ("recipe_id", "ingredient_id")
+    "recipe_has_ingredient" ("recipe_id", "ingredient_id,quantity")
 VALUES
     (1, 2),
     (1, 3),
