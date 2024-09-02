@@ -47,7 +47,7 @@ VALUES
 INSERT INTO "recipe"
     ("name", "description", "picture", "difficulty", "time", "instruction", "recipe_category_id", "movie_id", "user_id")
 VALUES
-    ('Soupe à l\'Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l\'huile d\'olive dans une grande casserole...', 1, 1, NULL),
+    ('Soupe à l''Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l\'huile d\'olive dans une grande casserole...', 1, 1, NULL),
 
     ('Ratatouille', 'Un plat principal provençal avec des légumes frais.', NULL, 'Moyenne', '1:00:00', 'Préchauffez le four à 180°C. Coupez les légumes en tranches fines...', 1, 1, NULL),
 
@@ -61,21 +61,21 @@ VALUES
 
     ('Nachos au Fromage avec "Crystal Blue" Salsa', 'Des nachos avec une salsa inspirée des cristaux du laboratoire.', NULL, 'Facile', '20:00', 'Préchauffez le four à 180°C. Disposez les chips de tortilla sur une plaque...', 3, 3, NULL),
 
-    ('Chili "Heisenberg" à la Mexicaine', 'Un chili épicé inspiré par Breaking Bad.', NULL, 'Moyenne', '45:00', 'Faites chauffer l\'huile d\'olive dans une grande casserole. Ajoutez l\'oignon...', 3, 3, NULL),
+    ('Chili "Heisenberg" à la Mexicaine', 'Un chili épicé inspiré par Breaking Bad.', NULL, 'Moyenne', '45:00', 'Faites chauffer l\'huile d\'olive dans une grande casserole. Ajoutez l''oignon...', 3, 3, NULL),
 
     ('Ribs au Barbecue', 'Des ribs tendres avec une sauce barbecue épicée.', NULL, 'Difficile', '2:30:00', 'Faites mariner les ribs dans une sauce barbecue pendant la nuit...', 3, 3, NULL),
 
     ('Gâteau au Chocolat de Dexter', 'Un gâteau au chocolat intense, parfait pour une soirée de réflexion.', NULL, 'Difficile', '1:15:00', 'Préchauffez le four à 180°C. Faites fondre le chocolat et le beurre...', 4, 4, NULL),
 
-    ('Brunch de Miami', 'Un brunch inspiré par l\'ambiance de Miami dans la série.', NULL, 'Facile', '30:00', 'Faites griller les bagels et préparez un assortiment de fruits...', 4, 4, NULL),
+    ('Brunch de Miami', 'Un brunch inspiré par l''ambiance de Miami dans la série.', NULL, 'Facile', '30:00', 'Faites griller les bagels et préparez un assortiment de fruits...', 4, 4, NULL),
 
     ('Salade César', 'Une salade fraîche et croquante pour accompagner vos repas.', NULL, 'Facile', '20:00', 'Mélangez les feuilles de laitue avec les croûtons et le fromage...', 4, 4, NULL),
 
-    ('Milkshake au Vanille', 'Un milkshake classique comme celui de la scène emblématique.', NULL, 'Facile', '10:00', 'Mixez le lait, la glace à la vanille et l\'extrait de vanille jusqu\'à obtenir une consistance lisse...', 5, 5, NULL),
+    ('Milkshake au Vanille', 'Un milkshake classique comme celui de la scène emblématique.', NULL, 'Facile', '10:00', 'Mixez le lait, la glace à la vanille et l''extrait de vanille jusqu''à obtenir une consistance lisse...', 5, 5, NULL),
 
     ('Burger Royale avec Fromage', 'Un burger gourmet avec une touche de fromage.', NULL, 'Moyenne', '25:00', 'Formez des galettes de viande et faites-les cuire à la poêle...', 5, 5, NULL),
 
-    ('Pommes de Terre Frites', 'Des frites croustillantes, parfaites pour accompagner les burgers.', NULL, 'Facile', '20:00', 'Coupez les pommes de terre en bâtonnets et faites-les frémir dans de l\'huile chaude...', 5, 5, NULL);
+    ('Pommes de Terre Frites', 'Des frites croustillantes, parfaites pour accompagner les burgers.', NULL, 'Facile', '20:00', 'Coupez les pommes de terre en bâtonnets et faites-les frémir dans de l''huile chaude...', 5, 5, NULL);
 
 
 -- Insertion des ingrédients
@@ -85,7 +85,7 @@ INSERT INTO "ingredient"
 
 VALUES ('Oignon'),
     ('Beurre'),
-    ('Huile d\'olive'),
+    ('Huile d''olive'),
     ('Bouillon de oeuf'),
     ('Vin blanc'),
     ('Pain baguette'),
@@ -104,7 +104,7 @@ VALUES ('Oignon'),
     ('Cannelle'),   
     ('Farine'),
     ('Sucre glace'),
-    ('Jaune d\'œuf'),
+    ('Jaune d''œuf'),
     ('Extrait de vanille'),
     ('Viande de bœuf'),
     ('Carottes'),
