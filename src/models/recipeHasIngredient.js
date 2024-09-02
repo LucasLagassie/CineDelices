@@ -24,7 +24,7 @@ RecipeHasIngredient.init(
       },
     },
     quantity: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
