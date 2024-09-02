@@ -23,6 +23,10 @@ RecipeHasIngredient.init(
         key: "id",
       },
     },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
