@@ -47,7 +47,7 @@ VALUES
 INSERT INTO "recipe"
     ("name", "description", "picture", "difficulty", "time", "instruction", "recipe_category_id", "movie_id", "user_id")
 VALUES
-    ('Soupe à l''Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l\'huile d\'olive dans une grande casserole...', 1, 1, NULL),
+    ('Soupe à l''Oignon Gratinée', 'Une entrée classique et chaleureuse inspirée par la cuisine française.', NULL, 'Facile', '1:00:00', 'Faites fondre le beurre avec l''huile d''olive dans une grande casserole...', 1, 1, NULL),
 
     ('Ratatouille', 'Un plat principal provençal avec des légumes frais.', NULL, 'Moyenne', '1:00:00', 'Préchauffez le four à 180°C. Coupez les légumes en tranches fines...', 1, 1, NULL),
 
@@ -55,7 +55,7 @@ VALUES
 
     ('Sablés de Tatooine', 'Des sablés évoquant les paysages désertiques de Tatooine.', NULL, 'Facile', '35:00', 'Préchauffez le four à 180°C. Mélangez la farine, le sucre et le sel...', 2, 2, NULL),
 
-    ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l\'huile d\'olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
+    ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l'huile d\'olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
 
     ('Tarte aux Étoiles', 'Une tarte évoquant les étoiles et constellations.', NULL, 'Facile', '50:00', 'Préchauffez votre four à 180°C. Étalez la pâte sablée et foncez un moule...', 2, 2, NULL),
 
