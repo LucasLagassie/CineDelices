@@ -55,7 +55,11 @@ VALUES
 
     ('Sablés de Tatooine', 'Des sablés évoquant les paysages désertiques de Tatooine.', NULL, 'Facile', '35:00', 'Préchauffez le four à 180°C. Mélangez la farine, le sucre et le sel...', 2, 2, NULL),
 
+<<<<<<< HEAD
     ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l''huile d''olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
+=======
+    ('Ragoût de Wookiee', 'Un plat copieux inspiré par Chewbacca et sa planète natale.', NULL, 'Moyenne', '1:50:00', 'Faites chauffer l'huile d\'olive dans une grande casserole. Ajoutez la viande...', 2, 2, NULL),
+>>>>>>> origin/feature/database
 
     ('Tarte aux Étoiles', 'Une tarte évoquant les étoiles et constellations.', NULL, 'Facile', '50:00', 'Préchauffez votre four à 180°C. Étalez la pâte sablée et foncez un moule...', 2, 2, NULL),
 
