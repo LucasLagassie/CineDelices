@@ -4,7 +4,7 @@ import { Recipe} from "../models/index.js";
 export const getAll = async (req, res) => {
     const movieAndSeries = await MovieAndSerie.findAll({
         include: {
-            association: "recipes",
+            association: "recipe",
             through: { attributes: []},
          
         },

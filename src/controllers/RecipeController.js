@@ -5,11 +5,11 @@ export const getAll = async (req, res) => {
     const recipes = await Recipe.findAll({
         include: [
             {
-                association: "recipeHasIngredients",
+                association: "ingredient",
                 through: { attributes: []},
             },
             {
-                association: "recipeHasCategories",
+                association: "recipe_category",
                 through: { attributes: []},
             },
         ],
@@ -21,7 +21,7 @@ export const getAll = async (req, res) => {
 export const getOne = async (req, res) => {
     const recipe = await Recipe.findByPk(req.params.id,{
       include: {
-        association: "ingredients",
+        association: "ingredient",
         through: { attributes: [] },
       },
     });
@@ -39,7 +39,7 @@ export const getOne = async (req, res) => {
   export const modifyOne = async (req, res) => {
     const recipe = await Recipe.findByPk(req.params.id, {
       include: {
-        association: "ingredients",
+        association: "ingredient",
         through: { attributes: [] },
       },
     });
