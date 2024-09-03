@@ -61,5 +61,17 @@ export const getOne = async (req, res) => {
     return res.status(204).end();
   };
   
-  
+  export const getRecipesByMovie = async (req, res) => {
+    const movies = await MovieAndSerie.findByPk(req.params.id, {
+        include: {
+            association: "recipes",
+            through: { attributes: []},
+        },
+    });
+    
+    if(!movies){
+      throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
+    }
+    return res.json(movies.recipes);
+  };
   
