@@ -1,9 +1,9 @@
 import { Model, DataTypes } from "sequelize";
-import { sequelize } from "./sequilize.js";
+import { sequelize } from "./sequelize.js";
 
 export class MovieCategory extends Model {}
 
-movieCategory.init(
+MovieCategory.init(
   {
     name: {
       type: DataTypes.STRING,

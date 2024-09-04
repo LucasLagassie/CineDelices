@@ -15,16 +15,15 @@ export const getAll = async (req, res) => {
     return res.json(movieAndSeries);
 }
 
-export const getMoviesByRecipe = async (req, res) => {
-    const recipes = await Recipe.findByPk(req.params.id, {
+export const getOne = async (req, res) => {
+    const movieAndSerie = await MovieAndSerie.findByPk(req.params.id, {
         include: {
-            association: "movieAndSerie",
+            association: "recipe",
             through: { attributes: []},
         },
     });
-    
-    if(!recipes){
+    if(!movieAndSerie){
       throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
     }
-    return res.json(recipes.movieAndSerie);
-};
+    return res.json(movieAndSerie);
+}
