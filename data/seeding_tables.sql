@@ -730,7 +730,7 @@ VALUES
 
     (10, 50, '200 g de filet de bœuf, bien frais'),
     (10, 3, '2 cuillères à soupe d’''huile d''olive'),
-    (10, ),
+    (10, 32, '1 cuillère à soupe de jus de citron'),
     (10, ),
     (10, ),
     (10, ),
