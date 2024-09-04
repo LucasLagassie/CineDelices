@@ -650,43 +650,43 @@ VALUES
     (1, 9, 'Sel'),
     (1, 10, 'Poivre'),
     
-    (2, 11, ),
-    (2, 12),
-    (2, 38),
-    (2, 39),
-    (2, 14),
-    (2, 1),
-    (2, 15),
-    (2, 8),
-    (2, 9),
-    (2, 10),
+    (2, 11, '1 aubergine'),
+    (2, 12, '1 courgette'),
+    (2, 38, '1 poivron rouge'),
+    (2, 39, '1 poivron jaune'),
+    (2, 14, '2 tomates'),
+    (2, 1, '1 oignon'),
+    (2, 15, '2 gousses d''ail'),
+    (2, 3, '4 cuillères à soupe d''huile d''olive'),
+    (2, 8, '1 cuillère à café d''herbes de Provence'),
+    (2, 9, 'Sel'),
+    (2, 10, 'Poivre'),
 
-    (3, 17);
-    (3, 2);
-    (3, 18);
-    (3, 16);
-    (3, 20);
+    (3, 17, '5-6 pommes de type Golden ou Granny Smith'),
+    (3, 2, '100 g de beurre'),
+    (3, 18, '100 g de sucre'),
+    (3, 16, '1 pâte brisée ou feuilletée'),
+    (3, 20, '1 cuillère à café de cannelle (optionnel)'),
 
-    (4, 21);
-    (4, 2);
-    (4, 18);
-    (4, 23);
-    (4, 24);
-    (4, 9);
-    (4, 22);
+    (4, 21, '200 g de farine'),
+    (4, 2, '100 g de beurre, froid et coupé en morceaux'),
+    (4, 18, '50 g de sucre'),
+    (4, 23, '1 jaune d''oeuf'),
+    (4, 24, '1 cuillère à café d''extrait de vanille'),
+    (4, 9, '1 pincée de sel'),
+    (4, 22, 'Sucre glace pour saupoudrer (optionnel)'),
 
-    (5, 25);
-    (5, 1);
-    (5, 26);
-    (5, 27);
-    (5, 28);
-    (5, 15);
-    (5, 29);
-    (5, 30);
-    (5, 3);
-    (5, 8);
-    (5, 9);
-    (5, 10);
+    (5, 25, '500 g de viande de bœuf, coupée en morceaux'),
+    (5, 1, '1 oignon, émincé'),
+    (5, 26, '2 carottes, coupées en rondelles'),
+    (5, 27, '2 pommes de terre, coupées en dés'),
+    (5, 28, '200 g de champignons, tranchés'),
+    (5, 15, '2 gousses d''ail, hachées'),
+    (5, 29, '500 ml de bouillon de boeuf'),
+    (5, 30, '200 ml de vin rouge (optionnel)'),
+    (5, 3, '2 cuillères à soupe d''huile d''olive'),
+    (5, 9, 'sel'),
+    (5, 10,'poivre'),
 
     (6, 31);
     (6, 17);
