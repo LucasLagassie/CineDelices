@@ -1,9 +1,9 @@
-import { User, Recipe, MovieAndSerie} from "../models/user.js";
+import { User } from "../models/user.js";
 import { HTTPError } from "../errors/httpError.js";
 import { notFound } from "../middlewares/notFound.js";
 import { errorHandler } from "../middlewares/errorHandler.js";
 
-export const getAllUsers = async (req, res) => {}
+export const getAllUsers = async (req, res) => {
     const users = await User.findAll({
     include: [
         {
@@ -17,6 +17,7 @@ export const getAllUsers = async (req, res) => {}
     ],
 });
 return res.json(users);
+}
 
 
 export const getUser = async (req, res) => {

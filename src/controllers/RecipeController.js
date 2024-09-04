@@ -1,4 +1,5 @@
-import { Recipe, RecipeHasIngredient, RecipeCategory, RecipeHasCategory, Ingredient, MovieAndSerie} from "../models";
+import { Recipe } from "../models/recipe.js";
+import { MovieAndSerie } from "../models/movieAndSerie.js";
 import { HTTPError } from "../errors/httpError.js";
 
 export const getAll = async (req, res) => {
@@ -33,7 +34,7 @@ export const getOne = async (req, res) => {
 
   export const createOne = async (req, res) =>{
     const recipe = await Recipe.create(req.body);
-    return res.status(201).json(recipe);
+    return res.status(201).json(recipe); 
   };
   
   export const modifyOne = async (req, res) => {
