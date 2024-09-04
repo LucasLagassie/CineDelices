@@ -635,6 +635,7 @@ VALUES
     (123, 'Bouillon de volaille', NULL),
     (124, 'Feuille de Laurier', NULL),
     (125, 'Pâte à sucre', NULL);
+    (126, 'Basilic', NULL),
 
 INSERT INTO 
     "recipe_has_ingredient" ("recipe_id", "ingredient_id", "quantity")
@@ -736,11 +737,10 @@ VALUES
     (10, 50, '200 g de filet de bœuf, bien frais'),
     (10, 3, '2 cuillères à soupe d’''huile d''olive'),
     (10, 32, '1 cuillère à soupe de jus de citron'),
-    (10, ),
-    (10, ),
-    (10, ),
-    (10, ),
-    (10, ),
+    (10, 58, '1 cuillère à soupe de câpres, égouttées'),
+    (10, 56, '30 g de parmesan en copeaux'),
+    (10, 57, '1 poignée de roquette'),
+    (10, 126, 'Quelques feuilles de basilic frais (facultatif)'),
 
     (11, ),
     (11, ),
