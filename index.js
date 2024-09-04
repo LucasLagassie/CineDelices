@@ -14,6 +14,8 @@ app.use(express.json());
 
 app.use(router);
 
+app.use(express.static('public'));
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 })
