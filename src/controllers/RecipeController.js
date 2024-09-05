@@ -7,11 +7,9 @@ export const getAll = async (req, res) => {
     include: [
       {
         association: "ingredients",
-        through: { attributes: [] },
       },
       {
         association: "recipeCategory",
-        through: { attributes: [] },
       },
     ],
   });
@@ -20,10 +18,12 @@ export const getAll = async (req, res) => {
 
 export const getOne = async (req, res) => {
   const recipe = await Recipe.findByPk(req.params.id, {
-    include: {
-      association: "ingredient",
-      through: { attributes: [] },
-    },
+    include: [
+      { association: "ingredients" },
+      {
+        association: "recipeCategory",
+      },
+    ],
   });
   if (!recipe) {
     throw new HTTPError(404, "Oups! Cette scène semble manquer au scénario");

@@ -7,7 +7,12 @@ const { PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE } = process.env;
 const databaseURL = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}`;
 
 // on crée l'instance (une instance c'est juste un objet, fabriqué par une classe) de sequelize
-export const sequelize = new Sequelize(databaseURL);
+export const sequelize = new Sequelize(databaseURL, {
+  define: {
+    underscored: true, // les noms des colonnes dans le DB seront en snake case
+  },
+  logging: false,
+});
 
 try {
   await sequelize.authenticate();
