@@ -16,16 +16,9 @@ export const getAllUsers = async (req, res) => {
 
 export const getUser = async (req, res) => {
   const user = await User.findByPk(req.params.id, {
-    include: [
-      {
-        association: "recipe",
-        through: { attributes: [] },
-      },
-      {
-        association: "movie_and_serie",
-        through: { attributes: [] },
-      },
-    ],
+    include: {
+      association: "recipes",
+    },
   });
 
   if (!user) {
