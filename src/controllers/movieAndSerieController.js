@@ -1,29 +1,28 @@
 import { MovieAndSerie } from "../models/index.js";
-import { Recipe} from "../models/index.js";
+import { Recipe } from "../models/index.js";
 import { HTTPError } from "../errors/httpError.js";
 import { notFound } from "../middlewares/notFound.js";
 import { errorHandler } from "../middlewares/errorHandler.js";
 
 export const getAll = async (req, res) => {
-    const movieAndSeries = await MovieAndSerie.findAll({
-        include: {
-            association: "recipe",
-            through: { attributes: []},
-         
-        },
-    });
-    return res.json(movieAndSeries);
-}
+  const movieAndSeries = await MovieAndSerie.findAll({
+    include: {
+      association: "recipes",
+      through: { attributes: [] },
+    },
+  });
+  return res.json(movieAndSeries);
+};
 
 export const getOne = async (req, res) => {
-    const movieAndSerie = await MovieAndSerie.findByPk(req.params.id, {
-        include: {
-            association: "recipe",
-            through: { attributes: []},
-        },
-    });
-    if(!movieAndSerie){
-      throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
-    }
-    return res.json(movieAndSerie);
-}
+  const movieAndSerie = await MovieAndSerie.findByPk(req.params.id, {
+    include: {
+      association: "recipes",
+      through: { attributes: [] },
+    },
+  });
+  if (!movieAndSerie) {
+    throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
+  }
+  return res.json(movieAndSerie);
+};
