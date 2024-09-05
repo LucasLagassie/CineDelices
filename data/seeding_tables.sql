@@ -23,33 +23,33 @@ VALUES
 -- Insertion des films
 
 INSERT INTO "movie_and_serie"
-    ("name", "synopsis", "director", "actor", "release_date", "picture")
+    ("id", "name", "synopsis", "director", "actor", "release_date", "picture")
 VALUES
-    ('Ratatouille', 'Le film Ratatouille est une ode à la cuisine française et met en avant des plats raffinés avec des ingrédients simples mais savoureux. Voici trois recettes inspirées par le film, allant de l''entrée au dessert, pour capturer l''essence de la cuisine provençale et l''élégance culinaire du film.', 'Brad Bird', 'Patton Oswalt', 2007, NULL),
-    ('Star Wars', 'Voici une liste de trois recettes inspirées par l''univers de Star Wars, allant de l''entrée au dessert. Chacune est conçue pour capturer l''esprit de la galaxie lointaine, très lointaine, tout en étant adaptée à un repas convivial. Les recettes sont pour environ 4 personnes et incluent le temps de préparation.', 'George Lucas', 'Mark Hamill', 1977, NULL),
-    ('Breaking Bad', 'La série Breaking Bad est remplie de moments intenses et de personnages complexes, mais elle a aussi des touches de gastronomie, notamment grâce à la fameuse scène de la cuisine de Walter White. Voici trois recettes inspirées par la série, allant de l''entrée au dessert, pour capturer l’esprit de Breaking Bad', 'Vince Gilligan', 'Bryan Cranston', 2008, NULL),
-    ('Dexter', 'La série Dexter se distingue par son ambiance sombre et mystérieuse, ainsi que par ses scènes de cuisine qui mettent souvent en avant la précision et la préparation méticuleuse. Voici trois recettes inspirées par la série, allant de l''entrée au dessert, qui capturent à la fois l''élégance et l''atmosphère intrigante de Dexter', 'James Manos Jr.', 'Michael C. Hall', 2006, NULL),
-    ('Pulp Fiction', 'Le film Pulp Fiction de Quentin Tarantino est célèbre pour ses dialogues percutants, ses personnages mémorables, et ses scènes culinaires iconiques. Voici trois recettes inspirées par les moments culinaires du film, allant de l''entrée au dessert, pour une expérience gastronomique digne de ce classique du cinéma.', 'Quentin Tarantino', 'John Travolta', 1994, NULL),
-    ('Harry Potter', 'Plongez dans l''univers magique de Poudlard avec trois recettes inspirées par les banquets de la Grande Salle, les délices de la Cabane de Hagrid, et les secrets gourmands de Pré-au-Lard. Ces plats évoquent la richesse et la fantaisie de la saga de J.K. Rowling, parfaits pour une soirée ensorcelée.', 'J. K. Rowling', 'Daniel Radcliffe', 2001, NULL),
-    ('Game of Thrones', 'Préparez un festin royal ou digne d''une taverne avec trois recettes inspirées par les intrigues et les grandes maisons de Westeros. Chaque plat est conçu pour capturer l''essence brute et passionnée de cet univers épique.', 'George.R.R. Martins ', 'Emilia Clarke', 2011, NULL),
-    ('One piece', 'Embarquez avec l''équipage du Chapeau de Paille et découvrez trois recettes qui capturent l''esprit d''aventure des mers de Grand Line. Chaque plat est inspiré des voyages et des délices que l''on pourrait déguster à bord du Thousand Sunny.', 'Eiichiro Oda', 'Luffy', 1999, NULL),
-    ('Naruto', 'Invitez la chaleur et le réconfort du village de Konoha dans votre cuisine avec trois recettes inspirées par les mets préférés des ninjas. Chaque plat évoque l''énergie et la passion qui caractérisent cet univers de shinobis.', 'Masashi Kishimoto', 'Naruto', 2002, NULL),
-    ('Le seigneur des Anneaux', 'Entrez dans la Terre du Milieu avec ces trois recettes inspirées des repas chaleureux des Hobbits, des festins elfiques et des plats robustes des nains. Parfait pour une aventure culinaire épique digne de Frodon et de Sam.', 'J.R.R. Tolkien', 'Elijah Wood', 2001, NULL),
-    ('Le monde de Narnia', 'Voyagez au-delà de l''armoire et goûtez aux saveurs magiques de Narnia avec trois recettes inspirées de ce monde enchanteur. Chacune capture un moment gourmand de la saga de C.S. Lewis.', 'Andrew Adamson', 'Georgie Henley', 2005, NULL),
-    ('Les Animaux Fantastiques', 'Explorez l''Amérique magique des années 1920 avec trois recettes inspirées des mets dégustés par Norbert Dragonneau et ses compagnons, reflétant le charme et l''élégance de cette époque enchantée.', 'David Yates', 'Eddie Redmayne', 2016, NULL),
-    ('Le Voyage de Chihiro', 'Faites un voyage culinaire au cœur de l''univers onirique de Miyazaki avec trois recettes inspirées des mets appétissants du film. Chaque plat évoque la magie et le mystère de ce voyage extraordinaire.', 'Hayao Miyazak', 'Rumi Hiiragi', 2001, NULL),
-    ('Le Grinch', 'Apportez un peu de folie de Whoville à votre table avec trois recettes qui capturent l''esprit farfelu et festif du Grinch. Chaque plat est une explosion de couleurs et de saveurs, parfaite pour les fêtes de fin d''année.', 'Ron Howard', 'Jim Carrey', 2000, NULL),
-    ('Alice aux Pays des Merveilles', 'Laissez-vous emporter par l''univers fantastique et merveilleux d''Alice avec trois recettes inspirées par les personnages et les lieux enchâssés dans le Pays des Merveilles. Ces plats capturent l''esprit ludique et imaginaire du film de Tim Burton.', 'Tim Burton', 'Mia Wasikowska', 2010 , NULL);
+    (1, 'Ratatouille', 'Le film Ratatouille est une ode à la cuisine française et met en avant des plats raffinés avec des ingrédients simples mais savoureux. Voici trois recettes inspirées par le film, allant de l''entrée au dessert, pour capturer l''essence de la cuisine provençale et l''élégance culinaire du film.', 'Brad Bird', 'Patton Oswalt', 2007, NULL),
+    (2, 'Star Wars', 'Voici une liste de trois recettes inspirées par l''univers de Star Wars, allant de l''entrée au dessert. Chacune est conçue pour capturer l''esprit de la galaxie lointaine, très lointaine, tout en étant adaptée à un repas convivial. Les recettes sont pour environ 4 personnes et incluent le temps de préparation.', 'George Lucas', 'Mark Hamill', 1977, NULL),
+    (3, 'Breaking Bad', 'La série Breaking Bad est remplie de moments intenses et de personnages complexes, mais elle a aussi des touches de gastronomie, notamment grâce à la fameuse scène de la cuisine de Walter White. Voici trois recettes inspirées par la série, allant de l''entrée au dessert, pour capturer l’esprit de Breaking Bad', 'Vince Gilligan', 'Bryan Cranston', 2008, NULL),
+    (4, 'Dexter', 'La série Dexter se distingue par son ambiance sombre et mystérieuse, ainsi que par ses scènes de cuisine qui mettent souvent en avant la précision et la préparation méticuleuse. Voici trois recettes inspirées par la série, allant de l''entrée au dessert, qui capturent à la fois l''élégance et l''atmosphère intrigante de Dexter', 'James Manos Jr.', 'Michael C. Hall', 2006, NULL),
+    (5, 'Pulp Fiction', 'Le film Pulp Fiction de Quentin Tarantino est célèbre pour ses dialogues percutants, ses personnages mémorables, et ses scènes culinaires iconiques. Voici trois recettes inspirées par les moments culinaires du film, allant de l''entrée au dessert, pour une expérience gastronomique digne de ce classique du cinéma.', 'Quentin Tarantino', 'John Travolta', 1994, NULL),
+    (6, 'Harry Potter', 'Plongez dans l''univers magique de Poudlard avec trois recettes inspirées par les banquets de la Grande Salle, les délices de la Cabane de Hagrid, et les secrets gourmands de Pré-au-Lard. Ces plats évoquent la richesse et la fantaisie de la saga de J.K. Rowling, parfaits pour une soirée ensorcelée.', 'J. K. Rowling', 'Daniel Radcliffe', 2001, NULL),
+    (7, 'Game of Thrones', 'Préparez un festin royal ou digne d''une taverne avec trois recettes inspirées par les intrigues et les grandes maisons de Westeros. Chaque plat est conçu pour capturer l''essence brute et passionnée de cet univers épique.', 'George.R.R. Martins ', 'Emilia Clarke', 2011, NULL),
+    (8, 'One piece', 'Embarquez avec l''équipage du Chapeau de Paille et découvrez trois recettes qui capturent l''esprit d''aventure des mers de Grand Line. Chaque plat est inspiré des voyages et des délices que l''on pourrait déguster à bord du Thousand Sunny.', 'Eiichiro Oda', 'Luffy', 1999, NULL),
+    (9, 'Naruto', 'Invitez la chaleur et le réconfort du village de Konoha dans votre cuisine avec trois recettes inspirées par les mets préférés des ninjas. Chaque plat évoque l''énergie et la passion qui caractérisent cet univers de shinobis.', 'Masashi Kishimoto', 'Naruto', 2002, NULL),
+    (10,'Le seigneur des Anneaux', 'Entrez dans la Terre du Milieu avec ces trois recettes inspirées des repas chaleureux des Hobbits, des festins elfiques et des plats robustes des nains. Parfait pour une aventure culinaire épique digne de Frodon et de Sam.', 'J.R.R. Tolkien', 'Elijah Wood', 2001, NULL),
+    (11, 'Le monde de Narnia', 'Voyagez au-delà de l''armoire et goûtez aux saveurs magiques de Narnia avec trois recettes inspirées de ce monde enchanteur. Chacune capture un moment gourmand de la saga de C.S. Lewis.', 'Andrew Adamson', 'Georgie Henley', 2005, NULL),
+    (12, 'Les Animaux Fantastiques', 'Explorez l''Amérique magique des années 1920 avec trois recettes inspirées des mets dégustés par Norbert Dragonneau et ses compagnons, reflétant le charme et l''élégance de cette époque enchantée.', 'David Yates', 'Eddie Redmayne', 2016, NULL),
+    (13, 'Le Voyage de Chihiro', 'Faites un voyage culinaire au cœur de l''univers onirique de Miyazaki avec trois recettes inspirées des mets appétissants du film. Chaque plat évoque la magie et le mystère de ce voyage extraordinaire.', 'Hayao Miyazak', 'Rumi Hiiragi', 2001, NULL),
+    (14, 'Le Grinch', 'Apportez un peu de folie de Whoville à votre table avec trois recettes qui capturent l''esprit farfelu et festif du Grinch. Chaque plat est une explosion de couleurs et de saveurs, parfaite pour les fêtes de fin d''année.', 'Ron Howard', 'Jim Carrey', 2000, NULL),
+    (15, 'Alice aux Pays des Merveilles', 'Laissez-vous emporter par l''univers fantastique et merveilleux d''Alice avec trois recettes inspirées par les personnages et les lieux enchâssés dans le Pays des Merveilles. Ces plats capturent l''esprit ludique et imaginaire du film de Tim Burton.', 'Tim Burton', 'Mia Wasikowska', 2010 , NULL);
 
 
 -- Insertion des catégories de recettes
 
 INSERT INTO "recipe_category"
-    ("name")
+    ("id", "name")
 VALUES
-    ('Entrée'),
-    ('Plat'),
-    ('Dessert');
+    (1, 'Entrée'),
+    (2, 'Plat'),
+    (3, 'Dessert');
 
 
 -- Insertion des recettes
@@ -515,7 +515,7 @@ VALUES
     (1, 'Oignon', NULL),
     (2, 'Beurre', NULL),
     (3, 'Huile d''olive', NULL),
-    (4, 'Bouillon de boeuf', NULL),
+    (4, 'Bouillon de bœuf', NULL),
     (5, 'Vin blanc', NULL),
     (6, 'Pain', NULL),
     (7, 'Fromage râpé', NULL),
@@ -1020,7 +1020,7 @@ VALUES
     (45, 109, '150g de crème au beurre (pour la décoration)'),
     (45, 125, 'Pâte à sucre (pour les détails)');
     
-    INSERT INTO "movie_has_category" ("movie_and_serie_id", "movie_category_id")
+    INSERT INTO "movie_has_category" ("movie_id", "movie_category_id")
     VALUES
         (1, 8),  -- Ratatouille, Animation
         (2, 5),  -- Star Wars, Aventure
