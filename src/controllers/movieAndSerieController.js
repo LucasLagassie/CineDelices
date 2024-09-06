@@ -20,7 +20,7 @@ export const getOne = async (req, res) => {
     },
   });
   if (!movieAndSerie) {
-    throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
+    throw new HTTPError(404, "Oups! Cette scène semble manquer au scénario");
   }
   return res.json(movieAndSerie);
 };
