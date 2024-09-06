@@ -4,76 +4,71 @@ import { notFound } from "../middlewares/notFound.js";
 import { errorHandler } from "../middlewares/errorHandler.js";
 
 export const getAllUsers = async (req, res) => {
-    const users = await User.findAll({
+  const users = await User.findAll({
     include: [
-        {
-            association: "recipe", 
-            through: { attributes: [] },
-        },
-        {
-            association: "movie_and_serie", 
-            through: { attributes: [] },
-        },
+      {
+        association: "recipes",
+      },
     ],
-});
-return res.json(users);
-}
-
+  });
+  return res.json(users);
+};
 
 export const getUser = async (req, res) => {
-    const user = await User.findByPk(req.params.id, {
-        include: [
-            {
-                association: "recipe",
-                through: { attributes: [] },
-            },
-            {
-                association: "movie_and_serie",
-                through: { attributes: [] },
-            },
-        ],
-    });
+  const user = await User.findByPk(req.params.id, {
+    include: {
+      association: "recipes",
+    },
+  });
 
-    if (!user) {
-        throw new HTTPError(404, "Oups! Cet utilisateur semble manquer au scénario");
-    }
+  if (!user) {
+    throw new HTTPError(
+      404,
+      "Oups! Cet utilisateur semble manquer au scénario"
+    );
+  }
 
-    return res.json(user);
+  return res.json(user);
 };
 
 export const createUser = async (req, res) => {
-    const user = await User.create(req.body);
-    return res.status(201).json(user);
+  const user = await User.create(req.body);
+  return res.status(201).json(user);
 };
 
 export const editUser = async (req, res) => {
-    const user = await User.findByPk(req.params.id, {
-        include: [
-            {
-                association: "recipe",
-                through: { attributes: [] },
-            },
-            {
-                association: "movie_and_series",
-                through: { attributes: [] },
-            },
-        ],
-    });
+  const user = await User.findByPk(req.params.id, {
+    include: [
+      {
+        association: "recipe",
+        through: { attributes: [] },
+      },
+      {
+        association: "movie_and_series",
+        through: { attributes: [] },
+      },
+    ],
+  });
 
-    if (!user) {
-        throw new HTTPError(404, "Oups! Cet utilisateur semble manquer au scénario");
-    }
+  if (!user) {
+    throw new HTTPError(
+      404,
+      "Oups! Cet utilisateur semble manquer au scénario"
+    );
+  }
 
-    await user.update(req.body);
-    return res.json(user);
+  await user.update(req.body);
+  return res.json(user);
 };
 
 export const deleteUser = async (req, res) => {
-    const user = await User.findByPk(req.params.id);
-    if (!user) {
-        throw new HTTPError(404, "Oups! Cet utilisateur semble manquer au scénario");
-    }
-    await user.destroy();
-    return res.status(204).end();
+  const user = await User.findByPk(req.params.id);
+  if (!user) {
+    throw new HTTPError(
+      404,
+      "Oups! Cet utilisateur semble manquer au scénario"
+    );
+  }
+  await user.destroy();
+  return res.status(204).end();
 };
-

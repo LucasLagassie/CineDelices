@@ -9,7 +9,7 @@ MovieAndSerie.init(
     synopsis: { type: DataTypes.STRING, allowNull: false },
     director: { type: DataTypes.STRING, allowNull: false },
     actor: { type: DataTypes.STRING, allowNull: false },
-    release_date: { type: DataTypes.DATE, allowNull: false },
+    release_date: { type: DataTypes.STRING, allowNull: false },
     picture: { type: DataTypes.STRING },
   },
   {
