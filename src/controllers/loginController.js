@@ -7,19 +7,6 @@ import jsonwebtoken from "jsonwebtoken"; // Import JWT library for generating to
 // Load environment variables from .env file
 dotenv.config();
 
-// 'Login' route that retrieves user information with JWT authorization
-/* app.get("/login", authorizationMiddleware, async (req, res) => {
-   try {
-     const user = await User.findByPk(req.user.userId); // Get user by ID from JWT
-     if (!user) {
-       return res.status(404).json({ message: "Utilisateur non trouvÃ©..." });
-    }
-    res.json(user); // Send user data back to the client
-  } catch (error) {
-    res.status(500).json({ message: "Erreur serveur..." });
-  }
-}); */
-
 // Login function to authenticate users and generate JWT tokens
 export default async function login(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
@@ -35,7 +22,7 @@ export default async function login(req, res) {
 
     // If no user found, return a 401 Unauthorized response
     if (!user) {
-      return res.status(401).json({ message: "Utilisateur non trouvÃ©..." });
+      return res.status(401).json({ message: "Utilisateur non trouvé..." });
     }
 
     // Check if the password is correct by comparing with the hashed password stored in DB
@@ -66,7 +53,7 @@ export default async function login(req, res) {
     });
   } catch (err) {
     // Handle server errors
-    console.error("Erreur de login...:", err);
+    console.error("Erreur de connexion...:", err);
     res.status(500).json({ message: "Erreur serveur..." });
   }
 }
