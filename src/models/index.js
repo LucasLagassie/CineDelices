@@ -61,7 +61,7 @@ Recipe.belongsTo(RecipeCategory, {
 
 // relation Recipe/Ingredient (Many-to-Many)
 Recipe.belongsToMany(Ingredient, {
-  as: "ingredients",
+  as: "ingredient",
   through: RecipeHasIngredient,
 });
 

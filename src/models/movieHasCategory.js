@@ -30,7 +30,7 @@ MovieHasCategory.init(
     indexes: [
       {
         unique: true,
-        fields: ["movie_id", "movie_category_id"],
+        fields: ["movieId", "movieCategoryId"],
       },
     ],
   }
