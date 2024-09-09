@@ -34,7 +34,7 @@ RecipeHasIngredient.init(
     indexes: [
       {
         unique: true,
-        fields: ["recipe_id", "ingredient_id"],
+        fields: ["recipeId", "ingredientId"],
       },
     ],
   }
