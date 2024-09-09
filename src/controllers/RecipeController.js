@@ -3,11 +3,10 @@ import { MovieAndSerie } from "../models/movieAndSerie.js";
 import { HTTPError } from "../errors/httpError.js";
 
 export const getAll = async (req, res) => {
-
   const recipes = await Recipe.findAll({
     include: [
       {
-        association: "ingredients",
+        association: "ingredient",
       },
       {
         association: "recipeCategory",
@@ -17,11 +16,10 @@ export const getAll = async (req, res) => {
   return res.json(recipes);
 };
 
-
 export const getOne = async (req, res) => {
   const recipe = await Recipe.findByPk(req.params.id, {
     include: [
-      { association: "ingredients" },
+      { association: "ingredient" },
       {
         association: "recipeCategory",
       },
@@ -76,4 +74,3 @@ export const getRecipesByMovie = async (req, res) => {
   }
   return res.json(movies.recipes);
 };
-
