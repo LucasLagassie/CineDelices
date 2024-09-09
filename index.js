@@ -3,12 +3,13 @@ import express from "express";
 import cors from "cors";
 import { router } from "./src/routers/index.js";
 import dotenv from "dotenv";
-
+import bodyParser from "body-parser";
 
 const port = process.env.PORT || 3000;
 
-
 export const app = express();
+
+app.use(bodyParser.json());
 
 app.use(cors({ origin: process.env.ALLOWED_DOMAINS }));
 

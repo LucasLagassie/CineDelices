@@ -3,7 +3,8 @@ import jsonwebtoken from "jsonwebtoken"; // Import JWT library for generating to
 import { router as userRouter } from "./user.js";
 import { router as moviesSeriesRouter } from "./moviesSeries.js";
 import { router as recipeRouter } from "./Recipe.js";
-import login from "../controllers/maincontroller.js";
+import login from "../controllers/loginController.js";
+import register from "../controllers/registerController.js";
 
 // Authorization middleware for protecting routes
 const authorizationMiddleware = (req, res, next) => {
@@ -23,6 +24,8 @@ const authorizationMiddleware = (req, res, next) => {
 export const router = Router();
 
 router.post("/login", login);
+router.post("/register", register);
+
 router.use(authorizationMiddleware);
 
 router.use("/user", userRouter);
