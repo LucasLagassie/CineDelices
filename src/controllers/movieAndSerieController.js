@@ -6,14 +6,9 @@ import { errorHandler } from "../middlewares/errorHandler.js";
 
 export const getAll = async (req, res) => {
   const movieAndSeries = await MovieAndSerie.findAll({
-    include: [
-      {
-        association: "recipes",
-      },
-      {
-        association: "movieCategory",
-      },
-    ],
+    include: {
+      association: "recipes",
+    },
   });
   return res.json(movieAndSeries);
 };
