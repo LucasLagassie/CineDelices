@@ -5,11 +5,15 @@ import { notFound } from "../middlewares/notFound.js";
 import { errorHandler } from "../middlewares/errorHandler.js";
 
 export const getAll = async (req, res) => {
-
   const movieAndSeries = await MovieAndSerie.findAll({
-    include: {
-      association: "recipes",
-    },
+    include: [
+      {
+        association: "recipes",
+      },
+      {
+        association: "movieCategory",
+      },
+    ],
   });
   return res.json(movieAndSeries);
 };
@@ -21,9 +25,7 @@ export const getOne = async (req, res) => {
     },
   });
   if (!movieAndSerie) {
-
     throw new HTTPError(404, "Oups! Cette scène semble manquer au scénario");
   }
   return res.json(movieAndSerie);
 };
-
