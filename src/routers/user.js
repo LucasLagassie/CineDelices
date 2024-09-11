@@ -1,11 +1,18 @@
 import { Router } from "express";
-import { getAllUsers, getUser, createUser, editUser, deleteUser } from "../controllers/userController.js";
+import { getUser, editUser, deleteUser, createRecipe, deleteRecipe, editRecipe } from "../controllers/userController.js";
 import { controllerWrapper } from "../controllers/controllerWrapper.js";
 
 export const router = Router();
 
-router.get('/', controllerWrapper(getAllUsers));
+//Get user
 router.get('/:id', controllerWrapper(getUser));
-router.post('/', controllerWrapper(createUser));
+//Edit user
 router.post('/:id', controllerWrapper(editUser));
+//Delete user
 router.delete('/:id', controllerWrapper(deleteUser));
+//Create recipe
+router.post('/recipes', controllerWrapper(createRecipe));
+//Delete recipe
+router.delete('/recipes/:id', controllerWrapper(deleteRecipe));
+//Edit recipe
+router.put('/recipes/:id', controllerWrapper(editRecipe))

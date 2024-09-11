@@ -5,7 +5,7 @@ import { router } from "./src/routers/index.js";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { sequelize } from "./src/models/sequelize.js";
-
+import session from "express-session";
 
 const port = process.env.PORT || 3000;
 
@@ -15,8 +15,6 @@ export const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({ origin: process.env.ALLOWED_DOMAINS }));
-
-
 app.use(express.json());
 
 app.use(router);
