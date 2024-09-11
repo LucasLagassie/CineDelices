@@ -54,6 +54,7 @@ export default async function register(req, res) {
         id: newUser.id,
         pseudo: newUser.pseudo,
         email: newUser.email,
+        defaultValue: 'user'
       },
     });
   } catch (err) {

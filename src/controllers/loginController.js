@@ -7,6 +7,24 @@ import jsonwebtoken from "jsonwebtoken"; // Import JWT library for generating to
 // Load environment variables from .env file
 dotenv.config();
 
+
+const saltRounds = 10;
+
+const passwordPlainUser = "hashed_password1";
+const passwordPlainAdmin = "hashed_password_admin";
+
+const hashPassword = async (password) => {
+  const hash = await bcrypt.hash(password, saltRounds);
+  console.log(hash);
+}
+
+hashPassword(passwordPlainUser);
+hashPassword(passwordPlainAdmin);
+
+
+
+
+
 // Login function to authenticate users and generate JWT tokens
 export default async function login(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
@@ -19,7 +37,7 @@ export default async function login(req, res) {
   try {
     // Search for the user in the database using Sequelize
     const user = await User.findOne({ where: { email } });
-
+    console.log(user);
     // If no user found, return a 401 Unauthorized response
     if (!user) {
       return res.status(401).json({ message: "Utilisateur non trouvé..." });
@@ -57,3 +75,4 @@ export default async function login(req, res) {
     res.status(500).json({ message: "Erreur serveur..." });
   }
 }
+

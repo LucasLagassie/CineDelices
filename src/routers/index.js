@@ -28,12 +28,13 @@ export const router = Router();
 
 router.post("/login", login);
 router.post("/register", register);
-
-// router.use(authorizationMiddleware);
-
 router.use("/user", userRouter);
 router.use("/moviesSeries", moviesSeriesRouter);
 router.use("/recipe", recipeRouter);
+
+router.use(authorizationMiddleware);
+
+
 
 router.use(errorHandler);
 router.use(notFound);
