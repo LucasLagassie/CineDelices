@@ -5,7 +5,7 @@ import { router } from "./src/routers/index.js";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { sequelize } from "./src/models/sequelize.js";
-import session from "express-session";
+
 
 const port = process.env.PORT || 3000;
 
