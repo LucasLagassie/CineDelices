@@ -11,6 +11,9 @@ export const getAll = async (req, res) => {
       {
         association: "recipeCategory",
       },
+      {
+        association: "movieAndSerie",
+      },
     ],
   });
   return res.json(recipes);
