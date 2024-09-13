@@ -23,8 +23,6 @@ hashPassword(passwordPlainAdmin);
 
 
 
-
-
 // Login function to authenticate users and generate JWT tokens
 export default async function login(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
@@ -57,6 +55,10 @@ export default async function login(req, res) {
         expiresIn: "72h",
       }
     );
+
+    res.cookie('token', token, {httpOnly: true, maxAge: 72 * 60 * 60 * 1000});
+    console.log('Token set in Cookie');
+
 
     // Send the token and user info back to the client
     res.json({
