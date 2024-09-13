@@ -7,6 +7,8 @@ export const router = Router();
 
 //Get all the users 
 router.get('/users', controllerWrapper(adminController.getAllUsers));
+
+router.get('/:id', controllerWrapper(adminController.getUser));
 //delete an user 
 router.delete('/users/:id', controllerWrapper(adminController.deleteUsers));
 //get all the recipes

@@ -10,6 +10,19 @@ export const adminController = {
     const users = await User.findAll();
     return res.json(users);
 },
+    getUser: async (req, res) => {
+
+        const user = await User.findByPk(req.params.id, {
+            include: {
+                association: "recipes",
+            },
+        });
+        if(!user) {
+            throw new HTTPError(404, "Utilisateur non trouvé");
+        }
+        return res.json(user);
+    },
+   
     deleteUsers: async(req, res) => {
 
         const user = await User.findByPk(req.params.id);
