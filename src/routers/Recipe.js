@@ -6,7 +6,7 @@ import {
   createOne,
   updateOne,
   deleteOne,
-} from "../controllers/RecipeController.js";
+} from "../controllers/recipeController.js";
 import {
   updateRecipeSchema,
   idSchema,
