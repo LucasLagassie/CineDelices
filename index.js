@@ -6,11 +6,12 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { sequelize } from "./src/models/sequelize.js";
 import cookieParser from "cookie-parser";
+import helmet from "helmet";
 
 const port = process.env.PORT || 3000;
 
 export const app = express();
-
+app.use(helmet());
 app.use(cookieParser());
 
 app.use(bodyParser.json());
