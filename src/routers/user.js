@@ -41,19 +41,19 @@ router.delete(
 );
 //Create recipe
 router.post(
-  "/recipe",
+  "/recipes",
   createValidationMiddleWare(createRecipeSchema, "body"),
   controllerWrapper(createRecipe)
 );
 //Delete recipe
 router.delete(
-  "/recipe/:id",
+  "/recipes/:id",
   createValidationMiddleWare(idSchema, "params"),
   controllerWrapper(deleteRecipe)
 );
 //Edit recipe
 router.put(
-  "/recipe/:id",
+  "/recipes/:id",
   createValidationMiddleWare(idSchema, "params"),
   createValidationMiddleWare(updateRecipeSchema, "body"),
   controllerWrapper(editRecipe)

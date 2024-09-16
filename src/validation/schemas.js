@@ -72,6 +72,28 @@ export const updateUserSchema = joi
   })
   .min(1); // Cela signifie que l'objet doit contenir au moins un des champs définis (email, pseudo, password, avatar, role). Si l'objet envoyé dans la requête est vide ou ne contient aucun de ces champs, la validation échouera.
 
+// Schémas de validation pour les films et séries
+
+export const createMovieAndSerieSchema = joi.object({
+  name: joi.string().required(),
+  synopsis: joi.string().required(),
+  director: joi.string().required(),
+  actor: joi.string().required(),
+  releaseDate: joi.number().integer().required(),
+  picture: joi.string(),
+});
+
+export const updateMovieAndSerieSchema = joi
+  .object({
+    name: joi.string(),
+    synopsis: joi.string(),
+    director: joi.string(),
+    actor: joi.string(),
+    releaseDate: joi.number().integer(),
+    picture: joi.string(),
+  })
+  .min(1);
+
 export const createValidationMiddleWare = (schema, requestProperty) => {
   return (req, res, next) => {
     const { error } = schema.validate(req[requestProperty]);
