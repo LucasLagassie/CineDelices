@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { register } from "../controllers/registerController.js";
+import register from "../controllers/registerController.js";
 import {
   createValidationMiddleWare,
   createUserSchema,

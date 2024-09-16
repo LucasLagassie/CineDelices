@@ -58,8 +58,9 @@ export const createUserSchema = joi.object({
   email: joi.string().email().required(),
   pseudo: joi.string().min(3).required(),
   password: joi.string().required(),
+  confirmPassword: joi.string().required(),
   avatar: joi.string(),
-  role: joi.string().required(),
+  role: joi.string(),
 });
 
 export const updateUserSchema = joi
