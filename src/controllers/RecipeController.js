@@ -34,6 +34,36 @@ export const getOne = async (req, res) => {
   return res.json(recipe);
 };
 
+export const createOne = async (req, res) => {
+  const recipe = await Recipe.create(req.body);
+  return res.status(201).json(recipe);
+};
+
+export const updateOne = async (req, res) => {
+  const recipe = await Recipe.findByPk(req.params.id, {
+    include: [
+      { association: "ingredient" },
+      {
+        association: "recipeCategory",
+      },
+    ],
+  });
+  if (!recipe) {
+    throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
+  }
+  await recipe.update(req.body);
+  return res.json(recipe);
+};
+
+export const deleteOne = async (req, res) => {
+  const recipe = await Recipe.findByPk(req.params.id);
+  if (!recipe) {
+    throw new HTTPError(404, "Oups! Cette scénario semble manquer au scénario");
+  }
+  await recipe.destroy();
+  return res.status(204).end();
+};
+
 export const getRecipesByMovie = async (req, res) => {
   const movies = await MovieAndSerie.findByPk(req.params.id, {
     include: {
