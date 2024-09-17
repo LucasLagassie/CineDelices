@@ -42,6 +42,8 @@ app.use(bodySanitizer);
 
 app.use(router);
 
+app.use(notFound);
+
 app.use(express.static("public"));
 
 app.listen(port, () => {
