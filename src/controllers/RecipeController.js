@@ -2,6 +2,7 @@ import { Recipe, RecipeHasIngredient, RecipeCategory, MovieCategory, MovieHasCat
 import { HTTPError } from "../errors/httpError.js";
 
 export const getAll = async (req, res) => {
+<<<<<<< HEAD
     const recipes = await Recipe.findAll({
         include: [
             {
@@ -28,6 +29,7 @@ export const getOne = async (req, res) => {
         throw new HTTPError(404, "Oups! Cette scène semble manquer au scénario");
     }
     return res.json(recipe);
+  
 };
 
 export const createOne = async (req, res) => {

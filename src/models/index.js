@@ -72,12 +72,12 @@ Ingredient.belongsToMany(Recipe, {
 
 // relation MovieAndSerie/MovieCategory (Many-to-Many)
 MovieAndSerie.belongsToMany(MovieCategory, {
-  as: "movieCategories",
+  as: "movieCategory",
   through: MovieHasCategory,
 });
 
 MovieCategory.belongsToMany(MovieAndSerie, {
-  as: "movieAndSeries",
+  as: "movieAndSerie",
   through: MovieHasCategory,
 });
 
