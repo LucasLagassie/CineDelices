@@ -3,9 +3,14 @@ import { HTTPError } from "../errors/httpError.js";
 
 export const getAll = async (req, res) => {
   const movieAndSeries = await MovieAndSerie.findAll({
-    include: {
-      association: "recipes",
-    },
+    include: [
+      {
+        association: "recipes",
+      },
+      {
+        association: "movieAndSerieCategory",
+      },
+    ],
   });
   return res.json(movieAndSeries);
 };
