@@ -6,7 +6,12 @@ import {
   createOne,
   updateOne,
   deleteOne,
+<<<<<<< HEAD
 } from "../controllers/RecipeController.js";
+=======
+  getLatestRecipes,
+} from "../controllers/recipeController.js";
+>>>>>>> cbfcfc0bed0131df905fa52b284bfcad323b1119
 import {
   updateRecipeSchema,
   idSchema,
@@ -17,6 +22,9 @@ import {
 export const router = Router();
 
 router.get("/", controllerWrapper(getAll));
+
+// Dernières recettes ajoutées
+router.get("/latest", controllerWrapper(getLatestRecipes));
 
 router.get(
   "/:id",

@@ -6,9 +6,9 @@ import { router } from "./src/routers/index.js";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { sequelize } from "./src/models/sequelize.js";
-import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import { notFound } from "./src/middlewares/notFound.js";
+import cookieParser from "cookie-parser";
 
 const port = process.env.PORT || 3000;
 
