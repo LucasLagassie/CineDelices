@@ -8,8 +8,6 @@ import bodyParser from "body-parser";
 import { sequelize } from "./src/models/sequelize.js";
 import { MovieAndSerie } from "./src/models/movieAndSerie.js";
 import { Recipe } from "./src/models/recipe.js";
-
-import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import { notFound } from "./src/middlewares/notFound.js";
 import cookieParser from "cookie-parser";
