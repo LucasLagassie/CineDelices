@@ -16,7 +16,7 @@ router.get('/recipes', controllerWrapper(adminController.getAllRecipes));
 //create a recipe
 router.post('/recipes', controllerWrapper(adminController.createRecipe));
 //edit a recipe
-router.put('/recipes/id', controllerWrapper(adminController.editRecipe));
+router.put('/recipes/:id', controllerWrapper(adminController.editRecipe));
 //delete a recipe
 router.delete('/recipes/:id', controllerWrapper(adminController.deleteRecipe));
 //get all the movies and series

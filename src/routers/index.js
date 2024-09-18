@@ -8,10 +8,11 @@ import { router as moviesSeriesRouter } from "./moviesSeries.js";
 import { router as recipeRouter } from "./Recipe.js";
 import { router as adminRouter } from "./admin.js";
 import { router as ingredientRouter } from "./ingredient.js";
+import { router as recipeCategoryRouter } from "./recipeCategory.js";
 import { cookiejwtAuth } from "../middlewares/cookiejwtAuth.js";
-
 import { errorHandler } from "../middlewares/errorHandler.js";
 import { notFound } from "../middlewares/notFound.js";
+
 
 // Authorization middleware for protecting routes
 
@@ -22,6 +23,7 @@ router.post("/register", register);
 router.use("/moviesSeries", moviesSeriesRouter);
 router.use("/recipes", recipeRouter);
 router.use("/ingredients", ingredientRouter);
+router.use("/recipeCategory", recipeCategoryRouter);
 router.use(cookiejwtAuth);
 router.use("/profile", userRouter);
 router.use("/admin", adminRouter);
