@@ -33,16 +33,13 @@ router.get("/recipes", controllerWrapper(adminController.getAllRecipes));
 //create a recipe
 router.post(
   "/recipes",
-  createValidationMiddleWare(createRecipeSchema, "body"),
   controllerWrapper(adminController.createRecipe)
 );
 //edit a recipe
 
 router.put(
-  "/recipes/id",
-  createValidationMiddleWare(idSchema, "params"),
-  createValidationMiddleWare(updateRecipeSchema, "body"),
-  controllerWrapper(adminController.editRecipe)
+  "/recipes/:id",
+  controllerWrapper(adminController.editRecipe),
 );
 //delete a recipe
 router.delete(

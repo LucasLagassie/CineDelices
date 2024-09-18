@@ -48,9 +48,9 @@ export const adminController = {
         const recipe = await Recipe.create(req.body, {
             include : [
                        {association: "ingredient"},
-                       
                     ]
         });
+        console.log(recipe);
         return res.status(201).json(recipe);
     },
 
