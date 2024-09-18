@@ -6,9 +6,14 @@ import {
   createOne,
   updateOne,
   deleteOne,
+<<<<<<< HEAD
   getLatestRecipes
 } from "../controllers/RecipeController.js";
 
+=======
+  getLatestRecipes,
+} from "../controllers/recipeController.js";
+>>>>>>> 5a8babe38cc0357fe12ff2288e1d408159d3cdc8
 import {
   updateRecipeSchema,
   idSchema,
