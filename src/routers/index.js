@@ -3,7 +3,7 @@ import { Router } from "express";
 import jsonwebtoken from "jsonwebtoken"; // Import JWT library for generating tokens
 import { router as userRouter } from "./user.js";
 import { router as moviesSeriesRouter } from "./moviesSeries.js";
-import { router as recipeRouter } from "./recipe.js";
+import { router as recipeRouter } from "./Recipe.js";
 import { router as adminRouter } from "./admin.js";
 import { router as ingredientRouter } from "./ingredient.js";
 import { router as recipeCategoryRouter } from "./recipeCategory.js";
