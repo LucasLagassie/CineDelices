@@ -37,6 +37,7 @@ router.post(
   controllerWrapper(adminController.createRecipe)
 );
 //edit a recipe
+
 router.put(
   "/recipes/id",
   createValidationMiddleWare(idSchema, "params"),

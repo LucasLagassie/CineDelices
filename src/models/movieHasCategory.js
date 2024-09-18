@@ -7,7 +7,7 @@ export class MovieHasCategory extends Model {}
 
 MovieHasCategory.init(
   {
-    movieId: {
+    movieAndSerieId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -30,7 +30,7 @@ MovieHasCategory.init(
     indexes: [
       {
         unique: true,
-        fields: ["movieId", "movieCategoryId"],
+        fields: ["movieAndSerieId", "movieCategoryId"],
       },
     ],
   }

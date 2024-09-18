@@ -35,19 +35,32 @@ export const adminController = {
 
     getAllRecipes: async (req,  res) => {
         const recipes = await Recipe.findAll({
-            include : ["ingredient", "recipeCategory"]
+            include : [
+                       {association: "ingredient"},
+                       {association:    "recipeCategory"}
+                    ]
         });
         return res.json(recipes);
     },
 
     createRecipe: async(req, res) => {
 
-        const recipe = await Recipe.create(req.body);
+        const recipe = await Recipe.create(req.body, {
+            include : [
+                       {association: "ingredient"},
+                       
+                    ]
+        });
         return res.status(201).json(recipe);
     },
 
     editRecipe: async(req,res) => {
-        const recipe = await Recipe.findByPk(req.params.id);
+        const recipe = await Recipe.findByPk(req.params.id, {
+            include : [
+                       { association: "ingredient"},
+                       
+                    ],
+        });
         if(!recipe){
             throw new HTTPError(404, "Recette non trouvée");
         }
