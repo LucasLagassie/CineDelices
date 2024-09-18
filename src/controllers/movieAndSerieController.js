@@ -1,8 +1,5 @@
 import { MovieAndSerie } from "../models/index.js";
-import { Recipe } from "../models/index.js";
 import { HTTPError } from "../errors/httpError.js";
-import { notFound } from "../middlewares/notFound.js";
-import { errorHandler } from "../middlewares/errorHandler.js";
 
 export const getAll = async (req, res) => {
   const movieAndSeries = await MovieAndSerie.findAll({

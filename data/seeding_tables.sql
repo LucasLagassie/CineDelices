@@ -17,8 +17,8 @@ VALUES
 INSERT INTO "user"
     ("email", "pseudo", "password", "avatar", "role")
 VALUES
-    ('johndoe@example.com', 'JohnDoe', 'hashed_password1', 'avatar1.png', 'user'),
-    ('admin@example.com', 'admin', 'hashed_password_admin', 'avatar2.png', 'admin');
+    ('johndoe@example.com', 'JohnDoe', '$2a$10$txSbhEpHHCfpFbrtrGzTKuPejWDcq7N7p/HIZEhpoc8nrL8t3TKL6', 'avatar1.png', 'user'),
+    ('admin@example.com', 'admin', '$2a$10$KF4ifKblfJ9zxMn2yUor2uzn9YiRcJipGlXl8iw88yKuyRJVNLLP6', 'avatar2.png', 'admin');
 
 -- Insertion des films
 

@@ -10,7 +10,6 @@ const databaseURL = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PG
 export const sequelize = new Sequelize(databaseURL, {
   define: {
     underscored: true,
-    
   },
   logging: false,
 });
