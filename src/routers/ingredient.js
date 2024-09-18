@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getAll } from "../controllers/ingredient.js";
 import { controllerWrapper } from "../controllers/controllerWrapper.js";
+import { getAll } from "../controllers/ingredientController.js";
 
 export const router = Router();
 
