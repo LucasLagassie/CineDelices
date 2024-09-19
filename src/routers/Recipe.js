@@ -6,15 +6,9 @@ import {
   createOne,
   updateOne,
   deleteOne,
-<<<<<<< HEAD
   getLatestRecipes
 } from "../controllers/RecipeController.js";
 
-
-=======
-  getLatestRecipes,
-} from "../controllers/recipeController.js";
->>>>>>> 6d153188f3b602da2143205c26a5dfd068b24bfd
 
 import {
   updateRecipeSchema,
