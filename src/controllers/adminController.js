@@ -50,7 +50,8 @@ export const adminController = {
                        {association: "ingredient"},
                     ]
         });
-        console.log(recipe);
+        console.log('req.body:', req.body);
+        console.log('recipe Admin controller', recipe);
         return res.status(201).json(recipe);
     },
 
