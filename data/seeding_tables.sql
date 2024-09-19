@@ -844,8 +844,6 @@ VALUES
     (23, 87, '3 cuillères à soupe de pâte de curry japonais'),
     (23, 96, '700ml de bouillon de poulet'),
     (23, 73, '2 cuillères à soupe d''huile de cuisson'),
-    (23, 9, 'sel'),
-    (23, 10, 'poivre'),
     (23, 88, 'Riz blanc cuit pour servir'),
 
 
